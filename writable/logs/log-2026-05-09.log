@@ -1,0 +1,576 @@
+DEBUG - 2026-05-09 02:44:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 02:56:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 02:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 02:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 02:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 02:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 02:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 02:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 02:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 02:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 02:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 02:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 02:59:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 02:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-09 02:59:36 --> Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `productos` SET `codigo` = \'010122\', `nombre` = \'costilla\', `descripcion` = \'.l.\', `id_categoria` = \'\', `id_proveedor` = \'1\', `precio_compra` = \'20000.00\', `precio_venta` = \'30000.00\', `stock_actual` = \'-2\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'16\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'010122\', `nombre` = \'costilla\', `descripcion` = \'.l.\', `id_categoria` = \'\', `id_proveedor` = \'1\', `precio_compra` = \'20000.00\', `precio_venta` = \'30000.00\', `stock_actual` = \'-2\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'16\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'010122\', `nombre` = \'costilla\', `descripcion` = \'.l.\', `id_categoria` = \'\', `id_proveedor` = \'1\', `precio_compra` = \'20000.00\', `precio_venta` = \'30000.00\', `stock_actual` = \'-2\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'16\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('16', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('16')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 02:59:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+[Method: POST, Route: productos/update/16]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('16', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('16')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 02:59:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'010122\', `nombre` = \'costilla\', `descripcion` = \'.l.\', `id_categoria` = \'\', `id_proveedor` = \'1\', `precio_compra` = \'20000.00\', `precio_venta` = \'30000.00\', `stock_actual` = \'-2\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'16\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'010122\', `nombre` = \'costilla\', `descripcion` = \'.l.\', `id_categoria` = \'\', `id_proveedor` = \'1\', `precio_compra` = \'20000.00\', `precio_venta` = \'30000.00\', `stock_actual` = \'-2\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'16\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('16', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('16')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 02:59:36 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `productos` SET `codigo` = \'010122\', `nombre` = \'costilla\', `descripcion` = \'.l.\', `id_categoria` = \'\', `id_proveedor` = \'1\', `precio_compra` = \'20000.00\', `precio_venta` = \'30000.00\', `stock_actual` = \'-2\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'16\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'010122\', `nombre` = \'costilla\', `descripcion` = \'.l.\', `id_categoria` = \'\', `id_proveedor` = \'1\', `precio_compra` = \'20000.00\', `precio_venta` = \'30000.00\', `stock_actual` = \'-2\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'16\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'010122\', `nombre` = \'costilla\', `descripcion` = \'.l.\', `id_categoria` = \'\', `id_proveedor` = \'1\', `precio_compra` = \'20000.00\', `precio_venta` = \'30000.00\', `stock_actual` = \'-2\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'16\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('16', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('16')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-09 02:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 02:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 02:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 02:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-09 03:00:10 --> Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `productos` SET `codigo` = \'010122\', `nombre` = \'costilla\', `descripcion` = \'.l.\', `id_categoria` = \'\', `id_proveedor` = \'1\', `precio_compra` = \'20000.00\', `precio_venta` = \'30000.00\', `stock_actual` = \'32\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'16\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'010122\', `nombre` = \'costilla\', `descripcion` = \'.l.\', `id_categoria` = \'\', `id_proveedor` = \'1\', `precio_compra` = \'20000.00\', `precio_venta` = \'30000.00\', `stock_actual` = \'32\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'16\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'010122\', `nombre` = \'costilla\', `descripcion` = \'.l.\', `id_categoria` = \'\', `id_proveedor` = \'1\', `precio_compra` = \'20000.00\', `precio_venta` = \'30000.00\', `stock_actual` = \'32\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'16\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('16', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('16')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:00:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+[Method: POST, Route: productos/update/16]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('16', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('16')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:00:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'010122\', `nombre` = \'costilla\', `descripcion` = \'.l.\', `id_categoria` = \'\', `id_proveedor` = \'1\', `precio_compra` = \'20000.00\', `precio_venta` = \'30000.00\', `stock_actual` = \'32\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'16\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'010122\', `nombre` = \'costilla\', `descripcion` = \'.l.\', `id_categoria` = \'\', `id_proveedor` = \'1\', `precio_compra` = \'20000.00\', `precio_venta` = \'30000.00\', `stock_actual` = \'32\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'16\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('16', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('16')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:00:10 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `productos` SET `codigo` = \'010122\', `nombre` = \'costilla\', `descripcion` = \'.l.\', `id_categoria` = \'\', `id_proveedor` = \'1\', `precio_compra` = \'20000.00\', `precio_venta` = \'30000.00\', `stock_actual` = \'32\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'16\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'010122\', `nombre` = \'costilla\', `descripcion` = \'.l.\', `id_categoria` = \'\', `id_proveedor` = \'1\', `precio_compra` = \'20000.00\', `precio_venta` = \'30000.00\', `stock_actual` = \'32\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'16\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'010122\', `nombre` = \'costilla\', `descripcion` = \'.l.\', `id_categoria` = \'\', `id_proveedor` = \'1\', `precio_compra` = \'20000.00\', `precio_venta` = \'30000.00\', `stock_actual` = \'32\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'16\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('16', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('16')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-09 03:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:00:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-09 03:00:39 --> Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'6\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'10\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'6\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'10\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'6\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'10\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('39', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('39')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:00:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+[Method: POST, Route: productos/update/39]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('39', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('39')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:00:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'6\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'10\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'6\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'10\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('39', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('39')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:00:39 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'6\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'10\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'6\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'10\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'6\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'10\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('39', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('39')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-09 03:00:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-09 03:00:51 --> Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'6\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'10\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'6\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'10\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'6\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'10\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('39', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('39')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:00:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+[Method: POST, Route: productos/update/39]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('39', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('39')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:00:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'6\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'10\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'6\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'10\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('39', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('39')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:00:51 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'6\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'10\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'6\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'10\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'6\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'10\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('39', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('39')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-09 03:00:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:00:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:01:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:01:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:01:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-09 03:01:10 --> Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_2` FOREIGN KEY (`id_proveedor`) REFERENCES `proveedores` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `productos` SET `codigo` = \'LIC001\', `nombre` = \'Aguardiente Antioqueño\', `descripcion` = \'Aguardiente anisado, 750 ml\', `id_categoria` = \'5\', `id_proveedor` = \'\', `precio_compra` = \'28000.00\', `precio_venta` = \'40000.00\', `stock_actual` = \'29\', `stock_minimo` = \'5\'
+WHERE `productos`.`id` IN (\'10\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'LIC001\', `nombre` = \'Aguardiente Antioqueño\', `descripcion` = \'Aguardiente anisado, 750 ml\', `id_categoria` = \'5\', `id_proveedor` = \'\', `precio_compra` = \'28000.00\', `precio_venta` = \'40000.00\', `stock_actual` = \'29\', `stock_minimo` = \'5\'
+WHERE `productos`.`id` IN (\'10\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'LIC001\', `nombre` = \'Aguardiente Antioqueño\', `descripcion` = \'Aguardiente anisado, 750 ml\', `id_categoria` = \'5\', `id_proveedor` = \'\', `precio_compra` = \'28000.00\', `precio_venta` = \'40000.00\', `stock_actual` = \'29\', `stock_minimo` = \'5\'
+WHERE `productos`.`id` IN (\'10\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('10', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('10')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:01:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_2` FOREIGN KEY (`id_proveedor`) REFERENCES `proveedores` (`id`) ON DELETE SET NULL)
+[Method: POST, Route: productos/update/10]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('10', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('10')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:01:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_2` FOREIGN KEY (`id_proveedor`) REFERENCES `proveedores` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'LIC001\', `nombre` = \'Aguardiente Antioqueño\', `descripcion` = \'Aguardiente anisado, 750 ml\', `id_categoria` = \'5\', `id_proveedor` = \'\', `precio_compra` = \'28000.00\', `precio_venta` = \'40000.00\', `stock_actual` = \'29\', `stock_minimo` = \'5\'
+WHERE `productos`.`id` IN (\'10\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'LIC001\', `nombre` = \'Aguardiente Antioqueño\', `descripcion` = \'Aguardiente anisado, 750 ml\', `id_categoria` = \'5\', `id_proveedor` = \'\', `precio_compra` = \'28000.00\', `precio_venta` = \'40000.00\', `stock_actual` = \'29\', `stock_minimo` = \'5\'
+WHERE `productos`.`id` IN (\'10\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('10', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('10')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:01:10 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_2` FOREIGN KEY (`id_proveedor`) REFERENCES `proveedores` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `productos` SET `codigo` = \'LIC001\', `nombre` = \'Aguardiente Antioqueño\', `descripcion` = \'Aguardiente anisado, 750 ml\', `id_categoria` = \'5\', `id_proveedor` = \'\', `precio_compra` = \'28000.00\', `precio_venta` = \'40000.00\', `stock_actual` = \'29\', `stock_minimo` = \'5\'
+WHERE `productos`.`id` IN (\'10\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'LIC001\', `nombre` = \'Aguardiente Antioqueño\', `descripcion` = \'Aguardiente anisado, 750 ml\', `id_categoria` = \'5\', `id_proveedor` = \'\', `precio_compra` = \'28000.00\', `precio_venta` = \'40000.00\', `stock_actual` = \'29\', `stock_minimo` = \'5\'
+WHERE `productos`.`id` IN (\'10\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'LIC001\', `nombre` = \'Aguardiente Antioqueño\', `descripcion` = \'Aguardiente anisado, 750 ml\', `id_categoria` = \'5\', `id_proveedor` = \'\', `precio_compra` = \'28000.00\', `precio_venta` = \'40000.00\', `stock_actual` = \'29\', `stock_minimo` = \'5\'
+WHERE `productos`.`id` IN (\'10\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('10', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('10')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-09 03:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:02:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:02:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-09 03:02:33 --> Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'3\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'99\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'3\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'99\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'3\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'99\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('39', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('39')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:02:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+[Method: POST, Route: productos/update/39]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('39', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('39')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:02:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'3\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'99\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'3\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'99\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('39', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('39')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:02:33 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'3\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'99\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'3\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'99\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'CER010\', `nombre` = \'Águila\', `descripcion` = \'Cerveza lager tradicional\', `id_categoria` = \'\', `id_proveedor` = \'3\', `precio_compra` = \'2500.00\', `precio_venta` = \'3500.00\', `stock_actual` = \'99\', `stock_minimo` = \'20\'
+WHERE `productos`.`id` IN (\'39\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('39', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('39')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-09 03:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:03:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:03:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:03:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:03:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-09 03:03:39 --> Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_2` FOREIGN KEY (`id_proveedor`) REFERENCES `proveedores` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `productos` SET `codigo` = \'LIC001\', `nombre` = \'Aguardiente Antioqueño\', `descripcion` = \'Aguardiente anisado, 750 ml\', `id_categoria` = \'5\', `id_proveedor` = \'\', `precio_compra` = \'28000.00\', `precio_venta` = \'40000.00\', `stock_actual` = \'29\', `stock_minimo` = \'5\'
+WHERE `productos`.`id` IN (\'10\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'LIC001\', `nombre` = \'Aguardiente Antioqueño\', `descripcion` = \'Aguardiente anisado, 750 ml\', `id_categoria` = \'5\', `id_proveedor` = \'\', `precio_compra` = \'28000.00\', `precio_venta` = \'40000.00\', `stock_actual` = \'29\', `stock_minimo` = \'5\'
+WHERE `productos`.`id` IN (\'10\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'LIC001\', `nombre` = \'Aguardiente Antioqueño\', `descripcion` = \'Aguardiente anisado, 750 ml\', `id_categoria` = \'5\', `id_proveedor` = \'\', `precio_compra` = \'28000.00\', `precio_venta` = \'40000.00\', `stock_actual` = \'29\', `stock_minimo` = \'5\'
+WHERE `productos`.`id` IN (\'10\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('10', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('10')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:03:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_2` FOREIGN KEY (`id_proveedor`) REFERENCES `proveedores` (`id`) ON DELETE SET NULL)
+[Method: POST, Route: productos/update/10]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('10', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('10')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:03:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_2` FOREIGN KEY (`id_proveedor`) REFERENCES `proveedores` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'LIC001\', `nombre` = \'Aguardiente Antioqueño\', `descripcion` = \'Aguardiente anisado, 750 ml\', `id_categoria` = \'5\', `id_proveedor` = \'\', `precio_compra` = \'28000.00\', `precio_venta` = \'40000.00\', `stock_actual` = \'29\', `stock_minimo` = \'5\'
+WHERE `productos`.`id` IN (\'10\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'LIC001\', `nombre` = \'Aguardiente Antioqueño\', `descripcion` = \'Aguardiente anisado, 750 ml\', `id_categoria` = \'5\', `id_proveedor` = \'\', `precio_compra` = \'28000.00\', `precio_venta` = \'40000.00\', `stock_actual` = \'29\', `stock_minimo` = \'5\'
+WHERE `productos`.`id` IN (\'10\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('10', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('10')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-09 03:03:39 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`pos_db`.`productos`, CONSTRAINT `productos_ibfk_2` FOREIGN KEY (`id_proveedor`) REFERENCES `proveedores` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('UPDATE `productos` SET `codigo` = \'LIC001\', `nombre` = \'Aguardiente Antioqueño\', `descripcion` = \'Aguardiente anisado, 750 ml\', `id_categoria` = \'5\', `id_proveedor` = \'\', `precio_compra` = \'28000.00\', `precio_venta` = \'40000.00\', `stock_actual` = \'29\', `stock_minimo` = \'5\'
+WHERE `productos`.`id` IN (\'10\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `productos` SET `codigo` = \'LIC001\', `nombre` = \'Aguardiente Antioqueño\', `descripcion` = \'Aguardiente anisado, 750 ml\', `id_categoria` = \'5\', `id_proveedor` = \'\', `precio_compra` = \'28000.00\', `precio_venta` = \'40000.00\', `stock_actual` = \'29\', `stock_minimo` = \'5\'
+WHERE `productos`.`id` IN (\'10\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `productos` SET `codigo` = \'LIC001\', `nombre` = \'Aguardiente Antioqueño\', `descripcion` = \'Aguardiente anisado, 750 ml\', `id_categoria` = \'5\', `id_proveedor` = \'\', `precio_compra` = \'28000.00\', `precio_venta` = \'40000.00\', `stock_actual` = \'29\', `stock_minimo` = \'5\'
+WHERE `productos`.`id` IN (\'10\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `productos` SET `codigo` = :codigo:, `nombre` = :nombre:, `descripcion` = :descripcion:, `id_categoria` = :id_categoria:, `id_proveedor` = :id_proveedor:, `precio_compra` = :precio_compra:, `precio_venta` = :precio_venta:, `stock_actual` = :stock_actual:, `stock_minimo` = :stock_minimo:
+WHERE `productos`.`id` IN :productos.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(406): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1074): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(709): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\Productos.php(73): CodeIgniter\Model->update('10', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Productos->update('10')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-09 03:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:04:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:05:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:05:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-09 03:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
